@@ -10,7 +10,7 @@ from transformers import pipeline
 @st.cache_resource
 def load_and_process_pdf():
     # Sahi file path ka upyog
-    file_path = os.path.join(os.path.dirname(__file__), "avr_project.pdf")
+    file_path = os.path.join(os.path.dirname(__file__), "avr.pdf")
     
     loader = PyPDFLoader(file_path)
     documents = loader.load()
@@ -70,3 +70,4 @@ if st.button("Jawab Dhoondhein"):
             st.write(context)
     else:
         st.warning("Kripya apna sawal likhein.")
+
