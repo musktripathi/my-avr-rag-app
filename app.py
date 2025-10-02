@@ -9,7 +9,9 @@ from transformers import pipeline
 
 @st.cache_resource
 def load_and_process_pdf():
-    file_path = "avr_overview.pdf" # File ka naam jise tum upload karoge
+    # Sahi file path ka upyog
+    file_path = os.path.join(os.path.dirname(__file__), "avr_project.pdf")
+    
     loader = PyPDFLoader(file_path)
     documents = loader.load()
 
